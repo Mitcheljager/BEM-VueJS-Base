@@ -1,0 +1,28 @@
+.columns {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.column {
+  flex-grow: 0;
+  position: relative;
+  padding: 0 10px;
+}
+
+@for $i from 1 through $columns {
+  .column--#{$i} {
+     width: ((100% / $columns) * $i);
+  }
+}
+
+.column:first-child {
+  padding-left: 0;
+}
+
+.column:last-child {
+  padding-right: 0;
+}
