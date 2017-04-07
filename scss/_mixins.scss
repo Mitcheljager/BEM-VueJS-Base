@@ -6,8 +6,8 @@
   }
 }
 
-@mixin maxwidth($top: 0px) {
-  padding: $top calc((100vw - #{$max-width}) / 2);
+@mixin maxwidth($top: 0px, $size: #{$max-width}) {
+  padding: $top calc((100vw - #{$size}) / 2);
   margin: 0 auto;
 }
 
