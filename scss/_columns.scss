@@ -1,21 +1,30 @@
 .columns {
   display: flex;
-  flex-direction: row;
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   width: 100%;
+
+  @include mediaquery("tablet") {
+    flex-direction: row;
+  }
 }
 
 .column {
   flex-grow: 0;
   position: relative;
-  padding: 0 10px;
+
+  @include mediaquery("tablet") {
+    padding: 0 10px;
+  }
 }
 
 @for $i from 1 through $columns {
   .column--#{$i} {
-     width: ((100% / $columns) * $i);
+     width: 100%;
+
+     @include mediaquery("tablet") {
+       width: ((100% / $columns) * $i);
+     }
   }
 }
 

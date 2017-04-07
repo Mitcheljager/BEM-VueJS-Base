@@ -1,5 +1,5 @@
 .menu {
-  @include maxwidth(20px);
+  @include maxwidth(20px, 400px);
   background: #fff;
   border-bottom: 1px solid #f2f2f2;
   width: 100%;
