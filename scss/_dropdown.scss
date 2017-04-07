@@ -1,0 +1,60 @@
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(120%);
+  } to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(100%);
+  }
+}
+
+@keyframes dropdownFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(100%);
+  } to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(120%);
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__bubble {
+  position: absolute;
+  display: none;
+  background: #fff;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%) translateY(100%);
+  padding: 10px;
+  min-width: 120px;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.075), 0 3px 15px rgba(0,0,0,0.1);
+  animation: dropdownFadeIn 200ms;
+
+  &--is-active {
+    display: block;
+  }
+
+  &--is-moving-out {
+    animation: dropdownFadeOut 200ms;
+  }
+
+  &::after {
+    content: '▲';
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0 -3px 3px rgba(0,0,0,0.04), 0 -10px 10px rgba(0,0,0,0.1);
+    font-size: 16px;
+  }
+}
+
+.dropdown__content {
+  color: #333;
+}

@@ -1,0 +1,43 @@
+.button {
+  display: block;
+  background: $style-color;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0;
+  position: relative;
+
+  &:hover,
+  &:active {
+    outline: 0;
+    background: darken($style-color, 15%);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &--block {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  &--secondary {
+    background: #e7e7e7;
+    color: #333;
+
+    &:hover {
+      background: #e2e2e2;
+      color: #000;
+    }
+  }
+}
+
+.button__icon {
+  font-style: normal;
+  font-size: 14px;
+}

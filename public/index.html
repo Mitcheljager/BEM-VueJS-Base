@@ -5,42 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Drop the Base</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="css/layout.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <nav class="menu">
-    <ul class="menu__list">
-      <li class="menu__item">
-        <a href="#" class="menu__link">Home</a>
-      </li>
-      <li class="menu__item">
-        <a href="#" class="menu__link">Page</a>
-      </li>
-      <li class="menu__item">
-        <a href="#" class="menu__link">Link</a>
-      </li>
-      <li class="menu__item">
-        <a href="#" class="menu__link">Url</a>
-      </li>
-    </ul>
+    <div class="menu__container">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link menu__link--is-active">Home</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Page</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Link</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Url</a>
+        </li>
+      </ul>
+
+      <div class="menu__actions">
+        <div class="dropdown">
+          <button class="dropdown_button button js-dropdown-trigger" data-target="dropdown-menu">
+            Dropdown <i class="button__icon">&or;</i>
+          </button>
+
+          <div class="dropdown__bubble js-dropdown" data-dropdown="dropdown-menu">
+            <div class="dropdown__content">
+              Thanks for dropping me...
+
+              <button class="button button--block button--secondary js-dropdown-trigger" data-target="dropdown-menu">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </nav>
 
   <header class="header">
-    <section class="header__content">
-      <h1 class="header__title">BEM Base</h1>
-      <p class="header__introduction">
-        This is a base for projects following the BEM CSS structure.
-      </p>
-      <div class="header__actions">
-        <button class="header__button">Got it!</button>
-        <button class="header__button">Let's go!</button>
-      </div>
-    </section>
+    <div class="container">
+      <section class="header__content">
+        <h1 class="header__title">BEM Base</h1>
+        <p class="header__introduction">
+          This is a base for projects following the BEM CSS structure.
+        </p>
+        <div class="header__actions">
+          <button class="header__button">Got it!</button>
+          <button class="header__button">Let's go!</button>
+        </div>
+      </section>
+    </div>
     <div class="header__background"></div>
   </header>
 
-  <section class="content">
+  <section class="content container">
     <div class="columns">
       <div class="column column--4">
         <h2 class="title title--medium">Column title</h2>
@@ -65,6 +87,17 @@
     <div class="columns">
       <div class="column column--9">
         <h1 class="title title--large">Is es profecto tu</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ita relinquet duas, de quibus etiam atque etiam consideret. Nunc haec primum fortasse audientis servire debemus. Teneo, inquit, finem illi videri nihil dolere. Sed ne, dum huic obsequor, vobis molestus sim. Duo Reges: constructio interrete. </p>
+
+        <p>Non dolere, inquam, istud quam vim habeat postea videro; Vide, quaeso, rectumne sit. Sedulo, inquam, faciam. Quae cum dixisset, finem ille. Est autem a te semper dictum nec gaudere quemquam nisi propter corpus nec dolere. Quia nec honesto quic quam honestius nec turpi turpius. Nulla profecto est, quin suam vim retineat a primo ad extremum. Negare non possum. </p>
+
+        <p>Videamus igitur sententias eorum, tum ad verba redeamus. Sed ad rem redeamus; Quod ea non occurrentia fingunt, vincunt Aristonem; Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Quasi ego id curem, quid ille aiat aut neget. Et non ex maxima parte de tota iudicabis? Deinde dolorem quem maximum? </p>
+
+        <p>Hanc quoque iucunditatem, si vis, transfer in animum; Quam illa ardentis amores excitaret sui! Cur tandem? Dici enim nihil potest verius. Primum divisit ineleganter; Consequatur summas voluptates non modo parvo, sed per me nihilo, si potest; Mihi quidem Antiochum, quem audis, satis belle videris attendere. </p>
+
+        <p>Scio enim esse quosdam, qui quavis lingua philosophari possint; Non enim, si omnia non sequebatur, idcirco non erat ortus illinc. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Quodcumque in mentem incideret, et quodcumque tamquam occurreret. De vacuitate doloris eadem sententia erit. </p>
+
+
       </div>
       <aside class="sidebar column column--3">
         <div class="sidebar__block">
@@ -81,19 +114,21 @@
   </section>
 
   <footer class="footer">
-    <nav class="menu--footer">
-      <ul class="menu--footer__list">
-        <li class="menu--footer__item">
-          <a href="#" class="menu--footer__link">Footer</a>
-        </li>
-        <li class="menu--footer__item">
-          <a href="#" class="menu--footer__link">Link</a>
-        </li>
-        <li class="menu--footer__item">
-          <a href="#" class="menu--footer__link">Url</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav class="menu--footer">
+        <ul class="menu--footer__list">
+          <li class="menu--footer__item">
+            <a href="#" class="menu--footer__link">Footer</a>
+          </li>
+          <li class="menu--footer__item">
+            <a href="#" class="menu--footer__link">Link</a>
+          </li>
+          <li class="menu--footer__item">
+            <a href="#" class="menu--footer__link">Url</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 
   <script src="js/jquery-3.1.1.min.js"></script>
