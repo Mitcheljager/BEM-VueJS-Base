@@ -8,10 +8,14 @@ body {
   margin: 0;
   background: #f9f9f9;
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #333;
   font-weight: 300;
   line-height: 1.5em; }
+  @media (min-width: 768px) {
+    html,
+    body {
+      font-size: 16px; } }
 
 a {
   color: #f43059;
@@ -78,7 +82,7 @@ strong {
   display: block;
   background: #f43059;
   color: #fff;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.2em;
   font-weight: 300;
   display: inline-block;
@@ -109,66 +113,123 @@ strong {
   font-size: 14px; }
 
 .title {
-  margin: 20px 0;
+  margin: 1em 0;
   font-size: 16px; }
   .title--small {
-    font-size: 1.5em;
+    font-size: 13.8px;
     line-height: 1.25em; }
+    @media (min-width: 460px) {
+      .title--small {
+        font-size: 3vw; } }
+    @media (min-width: 960px) {
+      .title--small {
+        font-size: 28.8px; } }
   .title--medium {
-    font-size: 2em;
+    font-size: 17.25px;
     line-height: 1.25em; }
+    @media (min-width: 460px) {
+      .title--medium {
+        font-size: 3.75vw; } }
+    @media (min-width: 960px) {
+      .title--medium {
+        font-size: 36px; } }
   .title--large {
-    font-size: 3em;
+    font-size: 27.6px;
     line-height: 1.25em; }
+    @media (min-width: 460px) {
+      .title--large {
+        font-size: 6vw; } }
+    @media (min-width: 960px) {
+      .title--large {
+        font-size: 57.6px; } }
 
 .columns {
   display: flex;
-  flex-direction: row;
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   width: 100%; }
+  @media (min-width: 768px) {
+    .columns {
+      flex-direction: row; } }
 
 .column {
   flex-grow: 0;
-  position: relative;
-  padding: 0 10px; }
+  position: relative; }
+  @media (min-width: 768px) {
+    .column {
+      padding: 0 10px; } }
 
 .column--1 {
-  width: 8.3333333333%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--1 {
+      width: 8.3333333333%; } }
 
 .column--2 {
-  width: 16.6666666667%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--2 {
+      width: 16.6666666667%; } }
 
 .column--3 {
-  width: 25%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--3 {
+      width: 25%; } }
 
 .column--4 {
-  width: 33.3333333333%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--4 {
+      width: 33.3333333333%; } }
 
 .column--5 {
-  width: 41.6666666667%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--5 {
+      width: 41.6666666667%; } }
 
 .column--6 {
-  width: 50%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--6 {
+      width: 50%; } }
 
 .column--7 {
-  width: 58.3333333333%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--7 {
+      width: 58.3333333333%; } }
 
 .column--8 {
-  width: 66.6666666667%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--8 {
+      width: 66.6666666667%; } }
 
 .column--9 {
-  width: 75%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--9 {
+      width: 75%; } }
 
 .column--10 {
-  width: 83.3333333333%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--10 {
+      width: 83.3333333333%; } }
 
 .column--11 {
-  width: 91.6666666667%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column--11 {
+      width: 91.6666666667%; } }
 
 .column--12 {
   width: 100%; }
+  @media (min-width: 768px) {
+    .column--12 {
+      width: 100%; } }
 
 .column:first-child {
   padding-left: 0; }
@@ -281,9 +342,15 @@ strong {
   z-index: 1; }
 
 .header__title {
-  margin: 0 0 20px;
-  font-size: 4em;
+  margin: 0 0 0.2em;
+  font-size: 46px;
   line-height: 1.25em; }
+  @media (min-width: 460px) {
+    .header__title {
+      font-size: 10vw; } }
+  @media (min-width: 960px) {
+    .header__title {
+      font-size: 96px; } }
 
 .header__introduction {
   margin-top: 0; }
@@ -326,6 +393,8 @@ strong {
 .menu--footer__link {
   display: block;
   color: #333;
+  font-size: 14px;
+  line-height: 1.5em;
   text-decoration: none;
   font-weight: normal; }
   .menu--footer__link:hover {

@@ -10,3 +10,15 @@
   padding: $top calc((100vw - #{$max-width}) / 2);
   margin: 0 auto;
 }
+
+@mixin flexibleFontSize($size: 10) {
+  font-size: 460px * ($size / 100);
+
+  @include mediaquery("mobile") {
+    font-size: #{$size}vw;
+  }
+
+  @include mediaquery("max-width") {
+    font-size: $max-width * ($size / 100);
+  }
+}

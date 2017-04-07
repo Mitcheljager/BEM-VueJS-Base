@@ -17,8 +17,8 @@
 }
 
 .header__title {
-  margin: 0 0 20px;
-  font-size: 4em;
+  margin: 0 0 0.2em;
+  @include flexibleFontSize(10);
   line-height: 1.25em;
 }
 
